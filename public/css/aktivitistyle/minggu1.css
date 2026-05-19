@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+
+:root {
+    --bg-color: rgb(204, 232, 255);
+    --second-bg-color: rgb(118, 118, 210);
+    --text-color: rgb(0, 0, 0);
+    --second-text-color: rgb(255, 255, 255);
+    --main-color: rgb(101, 183, 210);
+    --nav-color: rgb(6, 6, 198);
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.icon-img {
+    width: 2rem;
+    height: 1.3rem;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 15%;
+    background-color: rgba(136, 160, 241, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#menu-icon {
+    font-size: 2.5rem;
+    color: var(--nav-color);
+    display: none;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    min-width: fit-content;
+}
+
+.logo img {
+    width: clamp(8rem, 20vw, 16rem);
+    height: auto;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar a {
+    font-size: clamp(1rem, 1.5vw, 1.8rem);
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+}
+
+.navbar a:hover {
+    color: var(--nav-color);
+    border-bottom: 3px solid var(--nav-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 8rem;
+    z-index: 1;
+    width: 100%;
+}
+
+.home-content h1 {
+    font-size: clamp(2rem, 10vw, 5rem);
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-color);
+    word-break: break-word;
+    border-bottom: 6px solid var(--second-bg-color);
+}
+
+.date-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    flex-wrap: wrap;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    border: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.projects {
+    background-color: var(--main-bg-color);
+}
+
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-items: center;
+    gap: 3rem;
+    row-gap: 5rem;
+    margin-top: 5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    border: 2px solid var(--nav-color);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    transform: scale(1.02);
+}
+
+.project-card img {
+    max-width: 300px;
+    max-height: 150px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: clamp(1.5rem, 10vw, 2.6rem);
+}
+
+.project-card p {
+    font-size: clamp(1rem, 10vw, 1.8rem);
+}
+
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* Base style for each bubble */
+.bubbles span {
+    position: absolute;
+    bottom: -100px; /* Start position below the viewport */
+    width: 40px;
+    height: 40px;
+    background: var(--second-text-color);
+    border-radius: 50%;
+    opacity: 1;
+    animation: rise 10s infinite ease-in; /* Apply animation */
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+}
+
+.bubbles img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/* Position bubbles on the right side with different delays */
+.bubbles span:nth-child(1) {
+    left: 80%;
+    animation-delay: 0s;
+    width: 5rem;
+    height: 5rem;
+}
+
+.bubbles span:nth-child(2) {
+    left: 82%;
+    animation-delay: 1s;
+    width: 5rem;
+    height: 5rem;
+}
+
+.bubbles span:nth-child(3) {
+    left: 84%;
+    animation-delay: 3s;
+    width: 5rem;
+    height: 5rem;
+}
+
+.bubbles span:nth-child(4) {
+    left: 86%;
+    animation-delay: 5s;
+    width: 5rem;
+    height: 5rem;
+}
+
+.bubbles span:nth-child(5) {
+    left: 86%;
+    animation-delay: 6s;
+    width: 5rem;
+    height: 5rem;
+}
+
+.bubbles span:nth-child(6) {
+    left: 88%;
+    animation-delay: 8s;
+    width: 5rem;
+    height: 5rem;
+}
+
+
+/* Keyframe animation for the rising motion */
+@keyframes rise {
+    0% {
+        bottom: -400px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px); /* Subtle horizontal movement */
+    }
+    100% {
+        bottom: 1080px; /* End position above the viewport */
+        transform: translateX(-200px);
+    }
+}
+
+
+.footer {
+    background-color: rgb(136, 160, 241);
+    padding: 50px 0;
+
+}
+
+.footer .social-icons {
+    text-align: center;
+}
+
+.footer ul {
+    text-align: center;
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer ul li a {
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    color: var(--nav-color);
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: clamp(1rem, 2vw, 1.6rem);;
+}
+
+/* floating navigation button */
+.float-nav-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--main-color);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.float-nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px var(--nav-color);
+}
+
+.float-nav-btn img {
+    width: 5rem;
+    height: 5rem;
+}
+
+/* ========== TABLETS (768px - 1024px) ========== */
+@media (max-width: 1100px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-width: 280px;
+        padding: 1.5rem;
+        background: rgba(136, 160, 241, 0.98);
+        border-bottom-left-radius: 1.5rem;
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0.8rem 0;
+        color: var(--text-color);
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .header {
+        padding: 1.2rem 5%;
+    }
+
+    section {
+        padding: 8rem 5%;
+    }
+}
+
+/* ========== LARGE PHONES (481px - 767px) ========== */
+@media (max-width: 767px) {
+    html {
+        font-size: 50%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-width: 280px;
+        padding: 1.5rem;
+        background: rgba(136, 160, 241, 0.98);
+        border-bottom-left-radius: 1.5rem;
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0.8rem 0;
+        color: var(--text-color);
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .header {
+        padding: 1rem 3%;
+    }
+
+    section {
+        padding: 6rem 3%;
+        min-height: auto;
+    }
+
+    .bubbles img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(1) {
+        left: 70%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(2) {
+        left: 72%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(3) {
+        left: 74%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(4) {
+        left: 76%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(5) {
+        left: 78%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(6) {
+        left: 88%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .footer ul {
+        gap: 0.5rem;
+    }
+
+    .footer ul li {
+        margin: 0;
+    }
+}
+
+/* ========== SMALL PHONES (320px - 480px) ========== */
+@media (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+
+    .header {
+        padding: 0.8rem 2%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 7rem;
+    }
+
+    #menu-icon {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 5rem 2%;
+        min-height: auto;
+    }
+
+    .bubbles img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(1) {
+        left: 60%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(2) {
+        left: 62%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(3) {
+        left: 64%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(4) {
+        left: 66%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(5) {
+        left: 66%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .bubbles span:nth-child(6) {
+        left: 68%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .footer {
+        padding: 2rem 2%;
+    }
+
+    .footer ul li {
+        display: inline-block;
+        margin: 0.3rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* ========== EXTRA SMALL PHONES (290px - 350px) ========== */
+@media (max-width: 380px) {
+    html {
+        font-size: 40%;
+    }
+
+    .projects-box {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        row-gap: 3rem;
+    }
+
+    .project-card {
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+        border-radius: 2rem;
+    }
+
+    .bubbles span {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .bubbles span:nth-child(1) {
+        left: 50%;
+    }
+
+    .bubbles span:nth-child(2) {
+        left: 52%;
+    }
+
+    .bubbles span:nth-child(3) {
+        left: 54%;
+    }
+
+    .bubbles span:nth-child(4) {
+        left: 56%;
+    }
+
+    .bubbles span:nth-child(5) {
+        left: 58%;
+    }
+
+    .bubbles span:nth-child(6) {
+        left: 60%;
+    }
+}
