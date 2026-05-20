@@ -24,7 +24,7 @@
             <a href="{{ route('latarbelakang') }}" class="">LATAR BELAKANG</a>
             <a href="{{ route('aktiviti') }}" class="">AKTIVITI</a>
             <a href="{{ route('laporan') }}" class="">LAPORAN</a>
-            <a href="{{ route('Kesimpulan') }}" class="">KESIMPULAN</a>
+            <a href="{{ route('kesimpulan') }}" class="">KESIMPULAN</a>
         </nav>
     </header>
 
@@ -97,7 +97,7 @@
                 <a href="{{ route('laporan') }}" class="">LAPORAN</a>
             </li>
             <li class="">
-                <a href="{{ route('Kesimpulan') }}" class="">KESIMPULAN</a>
+                <a href="{{ route('kesimpulan') }}" class="">KESIMPULAN</a>
             </li>
         </ul>
 
