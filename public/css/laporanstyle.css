@@ -483,47 +483,48 @@ section {
     border: 2px solid var(--text-color);
 }
 
+/* Applies to all screens 767px and below */
 @media (max-width: 767px) {
-    .ceo-card {
-        padding: 3rem 2rem;
-        border-radius: 2rem;
-        margin: 2rem;
-    }
-
-    .ceo-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .ceo-left {
-        align-items: center;
-        margin-bottom: 2rem;
-    }
-
-    .ceo-photo {
-        max-width: 250px;
-    }
-
+    .ceo-card,
     .ceo-card2 {
         padding: 3rem 2rem;
         border-radius: 2rem;
         margin: 2rem;
     }
 
+    .ceo-container,
     .ceo-container2 {
         flex-direction: column;
         text-align: center;
     }
 
+    .ceo-left,
     .ceo-left2 {
         align-items: center;
         margin-bottom: 2rem;
     }
 
+    .ceo-photo,
     .ceo-photo2 {
         max-width: 250px;
     }
 }
+
+/* Applies ONLY to screens 390px and below */
+@media (max-width: 390px) {
+    .ceo-card,
+    .ceo-card2 {
+        padding: 1.5rem 1rem;  /* tighter padding on small screens */
+        border-radius: 1.25rem;
+        margin: 1rem;          /* less margin to save space */
+    }
+
+    .ceo-photo,
+    .ceo-photo2 {
+        max-width: 180px;      /* smaller photo on small screens */
+    }
+}
+
 
 @media (max-width: 690px) {
     .ceo-photo {
