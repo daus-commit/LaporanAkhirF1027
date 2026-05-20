@@ -9,7 +9,7 @@ Route::get('/pengenalan', [UserController::class, 'pengenalan'])->name('pengenal
 Route::get('/latarbelakang', [UserController::class, 'latarbelakang'])->name('latarbelakang');
 Route::get('/aktiviti', [UserController::class, 'aktiviti'])->name('aktiviti');
 Route::get('/laporan', [UserController::class, 'laporan'])->name('laporan');
-Route::get('Kesimpulan', [UserController::class, 'Kesimpulan'])->name('Kesimpulan');
+Route::get('kesimpulan', [UserController::class, 'kesimpulan'])->name('kesimpulan');
 Route::get('/rujukan', [UserController::class, 'rujukan'])->name('rujukan');
 Route::get('/hire', [UserController::class, 'hire'])->name('hire');
 

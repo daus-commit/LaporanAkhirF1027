@@ -29,7 +29,7 @@ class UserController extends Controller
     }
 
     public function Kesimpulan() {
-        return view('Kesimpulan');
+        return view('kesimpulan');
     }
 
     public function rujukan() {
