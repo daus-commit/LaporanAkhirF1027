@@ -85,10 +85,8 @@
                         </p>
                     </div>
                 </div>
-
             </div>
-
-        <div class="btn-container">
+            <div class="btn-container">
                 <a href="{{ route('rujukan') }}" class="btn-about" style="margin: 1rem">
                     SUMBER RUJUKAN
                 </a>

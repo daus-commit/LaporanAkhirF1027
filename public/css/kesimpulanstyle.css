@@ -493,4 +493,10 @@ section {
     .btn {
         padding: 0.6rem 1.5rem;
     }
+    .btn-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: 2.5rem;
+    }
 }
