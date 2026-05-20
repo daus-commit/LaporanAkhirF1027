@@ -69,10 +69,10 @@
             </button>
 
             <div id="successMsg" style="display:none; margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(101,183,210,0.2); border:1.5px solid var(--main-color); border-radius:0.8rem; color:var(--nav-color); font-size:1.3rem; font-weight:500; text-align:center;">
-                 Terima kasih! Mesej anda telah berjaya dihantar.
+                 Terima kasih! Mesej anda telah berjaya dihantar ke Ts. Prof. Dr. Firdaus Hakimi
             </div>
             <div id="errorMsg" style="display:none; margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,100,100,0.1); border:1.5px solid #e55; border-radius:0.8rem; color:#c00; font-size:1.3rem; font-weight:500; text-align:center;">
-                ❌ Gagal hantar. Cuba lagi sebentar.
+                 GG bro. Cuba lagi nanti.
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@ function hantarEmel(btn) {
     const mesej  = document.getElementById('mesej').value.trim();
 
     if (!nama || !emel || !mesej) {
-        alert('Sila isi Nama, E-mel dan Mesej.');
+        alert('nt bro, isi semua yang dia mintak tu(selain hire xlayan AHAHAH gurau ii)');
         return;
     }
 
