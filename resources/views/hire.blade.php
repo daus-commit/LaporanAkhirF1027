@@ -105,7 +105,7 @@
                     <div class="subjek-row">
                         <input type="text" id="subjek" placeholder="Berkenaan apa?">
                         <button type="button" class="jana-btn" id="janaBtn" onclick="janaMesej(this)">
-                            ✨ Jana Mesej
+                            Jana Mesej
                         </button>
                     </div>
                     <span class="ai-loading" id="aiLoading" style="color: green">AI sedang menjana mesej...</span>
