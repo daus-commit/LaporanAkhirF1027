@@ -106,7 +106,7 @@ function hantarEmel(btn) {
         .then(() => {
             document.getElementById('successMsg').style.display = 'block';
             document.getElementById('errorMsg').style.display   = 'none';
-            btn.textContent = 'Dihantar ✓';
+            btn.textContent = 'Dihantar';
         })
         .catch((err) => {
             console.error(err);
