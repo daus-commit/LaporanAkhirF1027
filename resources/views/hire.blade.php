@@ -124,7 +124,7 @@
                     Terima kasih! Mesej anda telah berjaya dihantar ke Ts. Prof. Dr. Firdaus Hakimi
                 </div>
                 <div id="errorMsg" style="display:none; margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,100,100,0.1); border:1.5px solid #e55; border-radius:0.8rem; color:#c00; font-size:1.3rem; font-weight:500; text-align:center;">
-                    GG bro. Cuba lagi nanti.
+                    Anda telah buat yang terbaik sahabat! Cuba lagi nanti.
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@
         const mesej   = document.getElementById('mesej').value.trim();
 
         if (!nama || !emel || !mesej) {
-            alert('nt bro, isi dulu semua yang dia mintak tu (selain hire xlayan AHAHAH gurau ii)');
+            alert('Isi semua apa yang dia mintak dalam form sahabat baru boleh proceed menghantar.');
             return;
         }
 
@@ -176,7 +176,7 @@
         const loading = document.getElementById('aiLoading');
 
         if (!subjek) {
-            alert('Isi subjek lu, baru boleh jana mesej, haish');
+            alert('Isi subjek dulu sahabat, baru boleh jana mesej.');
             return;
         }
 
@@ -197,19 +197,19 @@
                 document.getElementById('mesej').value = data.mesej;
                 btn.textContent = 'Selesai!';
                 setTimeout(() => {
-                    btn.textContent = '✨ Jana Mesej';
+                    btn.textContent = 'Jana Mesej';
                     btn.disabled    = false;
                 }, 2000);
             } else {
                 alert('AI error: ' + (data.error ?? 'Cuba lagi'));
-                btn.textContent = '✨ Jana Mesej';
+                btn.textContent = 'Jana Mesej';
                 btn.disabled    = false;
             }
 
         } catch (err) {
             console.error(err);
-            alert('Gagal sambung ke AI. Cuba lagi.');
-            btn.textContent = '✨ Jana Mesej';
+            alert('Opss! AI tengah busy. Cuba lagi nanti!');
+            btn.textContent = 'Jana Mesej';
             btn.disabled    = false;
         } finally {
             loading.style.display = 'none';
