@@ -140,7 +140,7 @@
         const mesej   = document.getElementById('mesej').value.trim();
 
         if (!nama || !emel || !mesej) {
-            alert('Isi semua apa yang dia mintak dalam form sahabat baru boleh proceed menghantar.');
+            alert('Isi semua apa yang dia mintak dalam form baru boleh proceed menghantar.');
             return;
         }
 
