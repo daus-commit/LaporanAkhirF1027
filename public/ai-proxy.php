@@ -88,7 +88,7 @@ foreach ($models as $model) {
         'response' => json_decode($response, true),
     ];
 
-    // skip model ni kalau ada error
+    // auto skip model kalau ada error
     if ($curlErr || $response === false || $httpCode !== 200) continue;
 
     $result = json_decode($response, true);
